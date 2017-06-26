@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/events','Event\EventsController@index')->name('events');
+Route::get('/test', 'Event\EventsController@intio');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
